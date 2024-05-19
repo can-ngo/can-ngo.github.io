@@ -14,13 +14,16 @@ header {
     position: absolute;
     display: flex;
     border-radius: 50%;
-    width: 240px;
-    height: 200px;
+    max-width: 200px;
+    height: auto;
+    top: 50px;
     padding: 0 auto;
     margin: 0 auto;
+
 }
 
 canvas {
     width: 100vw;
-    height: 200px;
+    height: 250px;
+    border: 2px solid blue;
 }
