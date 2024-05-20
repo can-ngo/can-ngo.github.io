@@ -33,11 +33,13 @@ canvas {
 }
 
 #sign {
+    margin-top: 0;
     text-align: center;
 }
 
 #quote {
     margin-top: 10px;
+    margin-bottom: 0;
     text-align: center;
     font-weight: 400;
 }
