@@ -43,3 +43,18 @@ canvas {
     text-align: center;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #quote {
+        font-size: large;
+    }
+    #sign {
+        font-size: large;
+    }
+    #canngo_avt {
+        top: 30px;
+        max-width: 180px;
+        height: auto;
+    }
+}
