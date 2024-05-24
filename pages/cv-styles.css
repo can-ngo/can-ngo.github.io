@@ -1,3 +1,18 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 html {
     font-family: Verdana, sans-serif;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+
