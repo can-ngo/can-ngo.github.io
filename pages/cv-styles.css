@@ -38,3 +38,22 @@ h1 {
     display: flex;
     justify-content: space-evenly;
 }
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    
+}
+    
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    .contact {
+        display: initial;
+    }
+}
+    
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    .contact {
+        display: initial;
+    }
+}
