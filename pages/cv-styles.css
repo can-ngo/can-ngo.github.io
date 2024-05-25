@@ -6,18 +6,13 @@ html {
     font-family: Verdana, sans-serif;
 }
 
-header {
-   
-}
-
-.avatar-info {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-}
-
 #canngoavatar-2 {
-    width: 100%;
+    width: 200px;
+    height: auto;
     position: relative;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
 }
