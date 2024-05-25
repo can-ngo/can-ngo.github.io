@@ -7,9 +7,17 @@ html {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-    flex-wrap: wrap;
+   
+}
+
+.avatar-info {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+#canngoavatar-2 {
+    width: 100%;
+    position: relative;
 }
