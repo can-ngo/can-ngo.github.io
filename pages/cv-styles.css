@@ -6,10 +6,32 @@ html {
     font-family: Verdana, sans-serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 #canngoavatar-2 {
     width: 200px;
     height: auto;
-    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.summary {
+    text-align: justify;
+}
+
+.major {
+    margin-bottom: 0;
+}
+.school {
+    margin-top: 0;
+}
+
+.professional-development li,
+.skills li {
+    margin-top: 3px;
 }
 
 .contact {
