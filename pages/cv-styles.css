@@ -15,7 +15,9 @@ h1 {
     text-align: center;
 }
 
-
+a {
+    text-decoration: none;
+}
 
 #canngoavatar-2 {
     width: 200px;
