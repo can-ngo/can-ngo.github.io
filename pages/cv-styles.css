@@ -9,13 +9,29 @@ html {
 nav {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    width: 99%;
+    top: 0;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.space {
+    height: 5px;
+    width: 100%;
+}
+
+nav > i {
+    position: relative;
 }
 
 h1 {
     text-align: center;
 }
 
-a {
+a,
+a:visited,
+a:link {
     text-decoration: none;
 }
 
