@@ -4,6 +4,10 @@ let dark = document.getElementById("icon-dark-mode");
 dark.addEventListener('click',function(){
     const body = document.body;
     body.classList.toggle("dark-mode");
+
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("dark-mode");
+    
     // toggle icon sun-moon
     switch(dark.classList[1]){
         case "fa-moon":
