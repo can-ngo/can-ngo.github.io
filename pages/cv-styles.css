@@ -6,6 +6,10 @@ html {
     font-family: Verdana, sans-serif;
 }
 
+body {
+    position: absolute;    
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -14,11 +18,6 @@ nav {
     top: 0;
     left: 0;
     margin: 0 auto;
-}
-
-.space {
-    height: 5px;
-    width: 100%;
 }
 
 nav > i {
