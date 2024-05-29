@@ -15,6 +15,11 @@ dark.addEventListener('click',function(){
     }    
 });
 
+let now = new Date();
+let datetime = now.toLocaleString();
+
+// insert date time to HTML
+document.getElementById("date-time").innerHTML = datetime;
 
    
    
