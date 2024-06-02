@@ -60,23 +60,34 @@ const drawDark = () => {
 };
 
 // toggle light-mode
-let dark = document.getElementById("icon-light-mode");
+let light = document.getElementById("icon-light-mode");
 
-dark.addEventListener('click',function(){
+light.addEventListener('click',function(){
     const body = document.body;
     body.classList.toggle("light-mode");
     const nav = document.querySelector("nav");
     nav.classList.toggle("light-mode");
     
     // toggle icon sun-moon
-    switch(dark.classList[1]){
+    switch(light.classList[1]){
         case "fa-moon":
-            dark.classList.replace("fa-moon","fa-sun");
+            light.classList.replace("fa-moon","fa-sun");
+            
             break;
         case "fa-sun":
-            dark.classList.replace("fa-sun","fa-moon");
+            light.classList.replace("fa-sun","fa-moon");
+            
             break;
     }    
 });
 
-setInterval(drawDark,80);
+if (!document.body.classList.contains("light-mode"))
+    {
+        let matrixRunDark = setInterval(drawDark,80);
+    
+    } else {
+        let matrixRunLight = setInterval(draw,80);
+        
+    }
+
+
