@@ -94,6 +94,11 @@ a:any-link {
     color: white;
 }
 
+#nav-links:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
 @media screen and (max-width: 991px) {
     /* start of large tablet styles */
     
