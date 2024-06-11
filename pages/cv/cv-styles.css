@@ -9,6 +9,9 @@ html {
 body {
     position: absolute;
     top: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -23,9 +26,17 @@ nav {
     background-color: white;
 }
 
-nav > i {
-    position: relative;
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
+
+/* horizontal line class */
+.hr {
+    border-top: 1px solid grey;
+}
+
 
 h1 {
     text-align: center;
@@ -84,10 +95,11 @@ a:any-link {
     overflow: hidden;
 }
 
-.contact {
+footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 }
+
 
 .dark-mode {
     background-color: black;
