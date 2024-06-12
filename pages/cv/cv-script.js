@@ -27,7 +27,7 @@ let now = new Date();
 let datetime = now.toLocaleString();
 
 // insert date time to HTML
-document.getElementById("date-time").innerHTML = datetime;
+document.getElementById("date-time").innerText = datetime;
 
    
    
