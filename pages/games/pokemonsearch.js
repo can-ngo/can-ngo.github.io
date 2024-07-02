@@ -1,5 +1,6 @@
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
+const randomBtn = document.getElementById("random-button");
 const pokemonInfo = document.getElementById("pokemon-info");
 const pokemonName = document.getElementById("pokemon-name");
 const pokemonId = document.getElementById("pokemon-id");
@@ -17,7 +18,6 @@ const pokeApiProxy = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 let totalPokemon;
 
 
-
 const searchPokemon = () => {
   const searchValue = searchInput.value.toLowerCase();
     
@@ -33,7 +33,6 @@ const searchPokemon = () => {
       let pokemonUrl = "";
       
       pokemonUrl = pokeApiProxy + `/${searchValue}`;
-      console.log(pokemonUrl);
   
       fetchData(pokemonUrl).then(data=>{
       const {base_experience,
@@ -45,8 +44,58 @@ const searchPokemon = () => {
       stats,
       types,
       weight} = data;
-            
-      pokemonName.textContent = name.toUpperCase();
+      
+      showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
+    
+      }); 
+    }
+  })
+   
+}
+
+const randomPokemon = () => {
+  
+
+  fetchData(pokeApiProxy).then(totalData => {
+    totalPokemon = totalData.count
+
+    let randomId = Math.floor(Math.random()*1025);
+    
+      let pokemonUrl = "";
+      
+      pokemonUrl = pokeApiProxy + `/${randomId}`;
+      
+      fetchData(pokemonUrl).then(data=>{
+      const {base_experience,
+      height,
+      id,
+      name,
+      order,
+      sprites,
+      stats,
+      types,
+      weight} = data;
+      
+      showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
+        
+      }); 
+    })
+}
+
+async function fetchData (url) {
+  try {
+    const res = await fetch(url);
+    const data = await res.json(); 
+    return data;
+  }
+  catch (err) {
+    console.log(err);
+    alert("Pokemon not found");
+  }
+};
+
+const showFullPokemonInfo = (name,id,weight,height,types,stats,sprites) => {
+  pokemonName.textContent = name.toUpperCase();
       pokemonId.textContent = ` #${id}`;
       pokemonWeight.textContent = `Weight: ${weight} `;
       pokemonHeight.textContent = `Height: ${height}`;
@@ -82,24 +131,8 @@ const searchPokemon = () => {
       specialAttackBox.innerText = specialAttack;
       specialDefenseBox.innerText = specialDefense;
       speedBox.innerText = speed;
-    
-      }); 
-    }
-  })
-  
-  
 }
 
-async function fetchData (url) {
-  try {
-    const res = await fetch(url);
-    const data = await res.json(); 
-    return data;
-  }
-  catch (err) {
-    console.log(err);
-    alert("Pokemon not found");
-  }
-};
-
 searchBtn.addEventListener("click",searchPokemon);
+
+randomBtn.addEventListener("click",randomPokemon);
