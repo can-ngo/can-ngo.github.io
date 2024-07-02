@@ -59,7 +59,7 @@ const randomPokemon = () => {
   fetchData(pokeApiProxy).then(totalData => {
     totalPokemon = totalData.count
 
-    let randomId = Math.floor(Math.random()*1025);
+    let randomId = Math.ceil(Math.random()*1025);
     
       let pokemonUrl = "";
       
