@@ -27,7 +27,6 @@ const searchPokemon = () => {
   const searchValue = searchInput.value.toLowerCase();
     
   fetchData(pokeApiProxy).then(totalData => {
-    totalPokemon = totalData.count
 
   if(!searchValue){    
     alert("Pokemon not found");
@@ -105,6 +104,11 @@ const showFullPokemonInfo = (name,id,weight,height,types,stats,sprites) => {
       // pokemonSprite.src = sprites.front_default;
       pokemonSprite.src = `./showdown/${id}.gif`;
       
+      //Whenever a .gif not found, we use .png for that pokemon
+      pokemonSprite.onerror = (e) => {
+        pokemonSprite.src = sprites.front_default;
+      }
+
       let type = [];
       types.forEach(obj =>{
         type.push(obj.type.name);
