@@ -99,7 +99,8 @@ const showFullPokemonInfo = (name,id,weight,height,types,stats,sprites) => {
       pokemonId.textContent = ` #${id}`;
       pokemonWeight.textContent = `Weight: ${weight} `;
       pokemonHeight.textContent = `Height: ${height}`;
-      pokemonSprite.src = sprites.front_default;
+      // pokemonSprite.src = sprites.front_default;
+      pokemonSprite.src = `./showdown/${id}.gif`;
       
       let type = [];
       types.forEach(obj =>{
