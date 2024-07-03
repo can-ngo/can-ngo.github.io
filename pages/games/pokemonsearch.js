@@ -1,6 +1,8 @@
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
 const randomBtn = document.getElementById("random-button");
+const prevBtn = document.getElementById("prev-button");
+const nextBtn = document.getElementById("next-button");
 const pokemonInfo = document.getElementById("pokemon-info");
 const pokemonName = document.getElementById("pokemon-name");
 const pokemonId = document.getElementById("pokemon-id");
@@ -21,11 +23,11 @@ let totalPokemon;
 const arrOne = Array(1025).fill().map((_,i)=> i + 1);
 const arrTwo = Array(277).fill().map((_,i)=>i + 1 + 10000);
 const totalPokemonIdArray = arrOne.concat(arrTwo);
-
+let index = 0;
 
 const searchPokemon = () => {
   const searchValue = searchInput.value.toLowerCase();
-    
+  
   fetchData(pokeApiProxy).then(totalData => {
 
   if(!searchValue){    
@@ -50,7 +52,9 @@ const searchPokemon = () => {
       weight} = data;
       
       showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
-    
+      
+      index = totalPokemonIdArray.indexOf(Number(searchValue));
+
       }); 
     }
   })
@@ -58,12 +62,13 @@ const searchPokemon = () => {
 }
 
 const randomPokemon = () => {
-  
 
   fetchData(pokeApiProxy).then(totalData => {
       let randomIndex = Math.floor(Math.random()*totalPokemonIdArray.length);
       let randomId = totalPokemonIdArray[randomIndex];
       let pokemonUrl = "";
+
+      index = randomIndex;
       
       pokemonUrl = pokeApiProxy + `/${randomId}`;
       
@@ -79,9 +84,64 @@ const randomPokemon = () => {
       weight} = data;
       
       showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
-        
+      
       }); 
     })
+}
+
+
+const prevPokemon = () => {
+  
+  if (index === 0){
+    index = totalPokemonIdArray.length;
+  }  
+  
+  index -= 1;
+
+  let pokemonUrl = "";
+      
+      pokemonUrl = pokeApiProxy + `/${totalPokemonIdArray[index]}`;
+      
+      fetchData(pokemonUrl).then(data=>{
+      const {base_experience,
+      height,
+      id,
+      name,
+      order,
+      sprites,
+      stats,
+      types,
+      weight} = data;
+      
+      showFullPokemonInfo(name,id,weight,height,types,stats,sprites);     
+  })
+    
+}
+
+const nextPokemon = () => {
+  if (index === totalPokemonIdArray.length-1){
+    index = 0;
+  }
+  
+  let pokemonUrl = "";
+      
+  pokemonUrl = pokeApiProxy + `/${totalPokemonIdArray[index]}`;
+      
+      fetchData(pokemonUrl).then(data=>{
+      const {base_experience,
+      height,
+      id,
+      name,
+      order,
+      sprites,
+      stats,
+      types,
+      weight} = data;
+      
+      showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
+      index += 1;
+    })
+  
 }
 
 async function fetchData (url) {
@@ -144,3 +204,7 @@ const showFullPokemonInfo = (name,id,weight,height,types,stats,sprites) => {
 searchBtn.addEventListener("click",searchPokemon);
 
 randomBtn.addEventListener("click",randomPokemon);
+
+prevBtn.addEventListener("click",prevPokemon);
+
+nextBtn.addEventListener("click",nextPokemon);
