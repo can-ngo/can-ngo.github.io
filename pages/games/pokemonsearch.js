@@ -53,7 +53,7 @@ const searchPokemon = () => {
       
       showFullPokemonInfo(name,id,weight,height,types,stats,sprites);
       
-      index = totalPokemonIdArray.indexOf(Number(searchValue));
+      index = totalPokemonIdArray.indexOf(id);
 
       }); 
     }
