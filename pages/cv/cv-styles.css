@@ -14,6 +14,8 @@ body {
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 nav {
@@ -47,6 +49,13 @@ footer {
 
 h1 {
     text-align: center;
+}
+
+h2 {
+    background-color: grey;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 h4 {
@@ -141,9 +150,6 @@ a:any-link {
     overflow: hidden;
 }
 
-
-
-
 .dark-mode {
     background-color: black;
     color: white;
@@ -180,6 +186,8 @@ a:any-link {
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .working-exp-box {
