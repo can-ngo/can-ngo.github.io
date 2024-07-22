@@ -46,26 +46,6 @@ const draw = () => {
 }
 setInterval(draw,80);
 
-// const draw = () => {
-//     context.fillStyle = 'rgba(255,255,255,0.25)';
-//     context.fillRect(0, 0, canvas.width, canvas.height);
-
-//     context.fillStyle = '#000000';
-//     context.font = fontSize + 'px monospace';
-
-//     for (let i = 0; i < rainDrops.length; i++)
-//         {
-//             const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-//             context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
-
-//             if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.950) {
-//                 rainDrops[i]=0;
-//             }
-//             rainDrops[i]++;
-//         }
-// };
-
-// toggle light-mode
 light.addEventListener('click',function(){
     body.classList.toggle("light-mode");
     nav.classList.toggle("light-mode");
@@ -82,7 +62,3 @@ light.addEventListener('click',function(){
             break;
     }    
 });
-
-
-
-

@@ -1,10 +1,11 @@
-@media print {
+@media print { 
     nav {
         display: none !important;
     }
 
     body {
         width: 95%;
+        color: black;
     }
 
     h2 {
