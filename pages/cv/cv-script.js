@@ -23,11 +23,9 @@ dark.addEventListener('click',function(){
     }    
 });
 
-let now = new Date();
-let datetime = now.toLocaleString();
-
-// insert date time to HTML
-document.getElementById("date-time").innerText = datetime;
-
-   
+const displayTime = setInterval(()=>{ 
+    let now = new Date();
+    let datetime = now.toLocaleString();
+    document.getElementById("date-time").innerText = datetime;
+},1000);
    
