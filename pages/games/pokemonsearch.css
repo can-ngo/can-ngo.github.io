@@ -38,7 +38,7 @@ body {
 
 .search-container > input,
 .search-container > button {
-  font-size: 20px;
+  font-size: 1.3rem;
   margin: 5px auto;
 }
 
