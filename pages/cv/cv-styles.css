@@ -155,6 +155,9 @@ a:any-link {
     color: white;
 }
 
+.dark-mode h2 {
+    background-color: #483248;
+}
 #nav-links:hover {
     cursor: pointer;
     transform: rotate(90deg);
