@@ -58,7 +58,7 @@ light.addEventListener('click',function(){
             break;
         case "fa-sun":
             light.classList.replace("fa-sun","fa-moon");
-                       
+            // document.querySelectorAll('button').forEach(btn => btn.style.background ='black');           
             break;
     }    
 });
