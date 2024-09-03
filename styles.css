@@ -68,6 +68,14 @@ canvas {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.container {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    width: 100%;
+}
+
 .btn-cv-container {
     display: flex;
     justify-content: center;
@@ -85,6 +93,7 @@ canvas {
     cursor: pointer;
 }
 
+#html-css,
 #vanilla-js,
 #react,
 #data-visualize {
@@ -94,11 +103,13 @@ canvas {
     border: 1px solid white;
     border-radius: 20px;
     padding-bottom: 10px;
-    width: 12rem;
+    padding: 10px;
+    width: 20vw;
 }
 
 button {
     font-size: 1rem;
+    width: 14vw;
     margin: 5px auto 5px auto;
     padding: 5px 10px;
     background-color: #04AA6D;
@@ -124,6 +135,8 @@ button:hover {
 .light-mode button:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+
+.light-mode #html-css,
 .light-mode #vanilla-js,
 .light-mode #react,
 .light-mode #data-visualize {
@@ -150,16 +163,20 @@ button:hover {
         height: auto;
     }
 
-    .row {
+    .container {
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
+    #html-css,
     #vanilla-js,
     #react,
     #data-visualize {
-        width: 100%;
+        width: 90vw;
         margin: 10px;
-}
+    }
+
+    button {
+        width: 75vw;
+    }
 }
