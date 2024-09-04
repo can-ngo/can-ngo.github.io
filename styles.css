@@ -105,11 +105,12 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 20px;
     padding-bottom: 10px;
     padding: 10px;
     width: 20vw;
+    text-align: center;
 }
 
 button {
@@ -141,12 +142,14 @@ button:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
+/* 
 .light-mode #html-css,
 .light-mode #vanilla-js,
 .light-mode #react,
 .light-mode #data-visualize {
     border: 1px solid black;
 }
+*/
 
 
 #nav-links:hover {
