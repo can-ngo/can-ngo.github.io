@@ -4,6 +4,40 @@ let light = document.getElementById("icon-light-mode");
 const body = document.body;
 const nav = document.querySelector("nav");
 
+//Declare a countdown time event element
+const countDownHtml = document.getElementById("countdownToEvent");
+
+// Event is Tet Holiday at Mong 1 
+const eventDate = new Date("Feb 17, 2026 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    //Convert milliseconds to days, hours, minutes, seconds:
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //Display the countdown - update HTML with styled spans
+    if (distance > 0) {
+        countDownHtml.innerHTML = `Chỉ còn 
+            <span class="countdown-number">${days}</span> ngày 
+            <span class="countdown-number">${hours}</span> giờ 
+            <span class="countdown-number">${minutes}</span> phút 
+            <span class="countdown-number">${seconds}</span> giây 
+            là đến Tết Nguyên Đán 2026!`;
+    } else {
+        countDownHtml.innerHTML = "Happy Tet Holiday!";
+    }
+}
+
+// Initial call
+updateCountdown();
+// Update every second
+setInterval(updateCountdown, 1000);
+
 //Draw matrix canvas
 const canvas = document.getElementById("matrix");
 const context = canvas.getContext('2d');

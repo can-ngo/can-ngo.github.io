@@ -1,3 +1,8 @@
+#countdownToEvent .countdown-number {
+    color: #ff2222;
+    font-size: 3rem;
+    font-weight: bold;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -71,6 +76,14 @@ canvas {
     text-align: center;
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
+}
+
+#countdownToEvent {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #faf174;
 }
 
 .container {
