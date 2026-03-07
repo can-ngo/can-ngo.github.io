@@ -27,7 +27,7 @@ function updateCountdown() {
             <span class="countdown-number">${hours}</span> giờ 
             <span class="countdown-number">${minutes}</span> phút 
             <span class="countdown-number">${seconds}</span> giây 
-            là đến Tết Nguyên Đán 2026!`;
+            là đến Tết Nguyên Đán 2027!`;
     } else {
         countDownHtml.innerHTML = "Happy Tet Holiday!";
     }
