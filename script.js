@@ -8,7 +8,7 @@ const nav = document.querySelector("nav");
 const countDownHtml = document.getElementById("countdownToEvent");
 
 // Event is Tet Holiday at Mong 1 
-const eventDate = new Date("Feb 17, 2026 00:00:00").getTime();
+const eventDate = new Date("Feb 02, 2027 00:00:00").getTime(); //Change this date to your desired event date
 
 function updateCountdown() {
     const now = new Date().getTime();
